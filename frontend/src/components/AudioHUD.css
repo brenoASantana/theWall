@@ -1,0 +1,242 @@
+/* AudioHUD Styles - Dark Echo Navigation */
+
+.audio-hud {
+  position: fixed;
+  left: 20px;
+  top: 20px;
+  background: rgba(0, 0, 0, 0.9);
+  border: 2px solid #0f0;
+  border-radius: 8px;
+  padding: 15px;
+  font-family: 'Courier New', monospace;
+  color: #0f0;
+  max-width: 300px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+  z-index: 100;
+}
+
+.audio-hud .label {
+  font-weight: bold;
+  margin-top: 15px;
+  margin-bottom: 8px;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+  border-bottom: 1px solid #0f0;
+  padding-bottom: 5px;
+}
+
+/* Echo Indicator */
+.echo-indicator {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.echo-pulse {
+  font-size: 16px;
+  font-weight: bold;
+  padding: 8px 12px;
+  background: rgba(0, 255, 0, 0.1);
+  border: 1px solid #0f0;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.echo-pulse.active {
+  animation: echo-ping 1s infinite;
+  background: rgba(0, 255, 0, 0.3);
+  box-shadow: 0 0 15px rgba(0, 255, 0, 0.6);
+}
+
+@keyframes echo-ping {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 255, 0, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(0, 255, 0, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 255, 0, 0);
+  }
+}
+
+/* Sound Compass */
+.sound-compass {
+  display: flex;
+  justify-content: center;
+  margin: 15px 0;
+  background: rgba(0, 255, 0, 0.05);
+  border: 1px solid rgba(0, 255, 0, 0.3);
+  border-radius: 4px;
+  padding: 10px;
+}
+
+.sound-compass svg {
+  filter: drop-shadow(0 0 10px rgba(0, 255, 0, 0.3));
+}
+
+/* Frequency Analyzer */
+.frequency-analyzer {
+  margin-top: 15px;
+}
+
+.freq-bars {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  height: 60px;
+  background: rgba(0, 255, 0, 0.05);
+  border: 1px solid rgba(0, 255, 0, 0.2);
+  border-radius: 4px;
+  padding: 8px 4px;
+  gap: 3px;
+}
+
+.freq-bar {
+  flex: 1;
+  min-width: 8px;
+  background: linear-gradient(to top, #0f0, #00ff00);
+  border-radius: 2px;
+  transition: height 0.1s ease;
+  box-shadow: 0 0 8px currentColor;
+}
+
+/* Nearby Objects */
+.nearby-objects {
+  margin-top: 15px;
+}
+
+.object-indicator {
+  margin-bottom: 10px;
+  font-size: 12px;
+}
+
+.distance-text {
+  margin-bottom: 3px;
+  opacity: 0.8;
+}
+
+.signal-bar {
+  height: 8px;
+  background: rgba(0, 255, 0, 0.1);
+  border: 1px solid rgba(0, 255, 0, 0.3);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.signal-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #0f0, #00ff00);
+  box-shadow: 0 0 8px rgba(0, 255, 0, 0.6);
+  transition: width 0.2s ease;
+}
+
+/* Exit Proximity */
+.exit-proximity {
+  margin-top: 15px;
+}
+
+.distance-meter {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.meter-text {
+  margin-bottom: 5px;
+  text-align: center;
+  color: #ff0;
+  text-shadow: 0 0 10px rgba(255, 255, 0, 0.5);
+}
+
+.meter-bar {
+  height: 12px;
+  background: rgba(255, 255, 0, 0.1);
+  border: 1px solid #ff0;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.meter-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #ff0, #ffff00);
+  box-shadow: 0 0 10px rgba(255, 255, 0, 0.6);
+  transition: width 0.3s ease;
+}
+
+/* Sound Controls */
+.sound-controls {
+  margin-top: 15px;
+  font-size: 12px;
+}
+
+.control-info {
+  background: rgba(0, 255, 0, 0.1);
+  border: 1px solid rgba(0, 255, 0, 0.2);
+  border-radius: 4px;
+  padding: 8px;
+  line-height: 1.6;
+}
+
+.control-info > div {
+  opacity: 0.8;
+}
+
+/* Sound Inventory */
+.sound-inventory {
+  margin-top: 15px;
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+.inventory-sound {
+  font-size: 11px;
+  padding: 3px 0;
+  opacity: 0.8;
+  text-shadow: 0 0 5px rgba(0, 255, 0, 0.3);
+}
+
+/* Scrollbar customizado */
+.audio-hud::-webkit-scrollbar {
+  width: 8px;
+}
+
+.audio-hud::-webkit-scrollbar-track {
+  background: rgba(0, 255, 0, 0.05);
+  border-radius: 4px;
+}
+
+.audio-hud::-webkit-scrollbar-thumb {
+  background: rgba(0, 255, 0, 0.3);
+  border-radius: 4px;
+}
+
+.audio-hud::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 255, 0, 0.5);
+}
+
+/* Modo Dark Echo - escuridão extrema */
+.audio-hud.dark-echo-mode {
+  background: rgba(0, 0, 0, 0.95);
+  border-color: #00ff00;
+  box-shadow: 0 0 30px rgba(0, 255, 0, 0.2);
+}
+
+.audio-hud.dark-echo-mode .label {
+  color: #00ff00;
+  text-shadow: 0 0 15px rgba(0, 255, 0, 0.6);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .audio-hud {
+    max-width: 250px;
+    font-size: 11px;
+  }
+
+  .sound-compass svg {
+    width: 150px;
+    height: 150px;
+  }
+}

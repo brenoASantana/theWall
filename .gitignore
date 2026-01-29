@@ -1,0 +1,40 @@
+node_modules/
+npm-debug.log*
+yarn-error.log*
+build/
+dist/
+.DS_Store
+.env
+.env.local
+*.log
+
+# Go
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+/bin/
+/vendor/
+.idea/
+*.iml
+
+# Frontend
+frontend/build/
+frontend/.next/
+frontend/.cache/
+
+# Backend
+backend/thewall
+backend/.vscode/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+Thumbs.db
+.DS_Store
