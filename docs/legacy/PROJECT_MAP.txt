@@ -1,0 +1,276 @@
+```
+theWall - Horror Exploration Game
+==================================
+
+📁 ESTRUTURA DO PROJETO
+========================
+
+theWall/
+│
+├── 📄 README.md                    ← COMECE AQUI - Documentação completa
+├── 📄 QUICKSTART.md               ← Guia rápido para começar
+├── 📄 DEVELOPMENT.md              ← Guia de desenvolvimento
+├── 📄 AUDIO_GUIDE.md              ← Integração de áudio (Aphex Twin)
+├── 📄 EXAMPLES.md                 ← Exemplos de extensão do jogo
+├── 📄 .gitignore                  ← Arquivos ignorados pelo Git
+├── 📄 config.json                 ← Configurações do jogo
+│
+├── 🚀 run.sh                       ← Script inicializador (Linux/macOS)
+├── 🚀 run.bat                      ← Script inicializador (Windows)
+├── 🚀 dev-start.sh                ← Script desenvolvimento avançado
+│
+├── 📦 backend/                     ← SERVIDOR GO
+│   ├── main.go                    ← Servidor WebSocket + Game Logic
+│   ├── go.mod                     ← Dependências Go
+│   └── go.sum                     ← Lock de dependências (auto-gerado)
+│
+└── 🎨 frontend/                    ← CLIENTE REACT
+    ├── package.json               ← Dependências Node.js
+    ├── public/
+    │   └── index.html             ← Página HTML
+    │
+    └── src/
+        ├── index.js               ← Ponto de entrada
+        ├── index.css              ← Estilos globais
+        ├── App.js                 ← Componente principal
+        ├── App.css                ← Estilos do App
+        │
+        ├── components/
+        │   ├── GameScene.js       ← Renderização 3D (Three.js)
+        │   └── GameHUD.js         ← Interface de usuário
+        │
+        └── utils/
+            ├── AudioManager.js    ← Gerenciador de áudio
+            ├── VisualEffects.js   ← Efeitos visuais
+            └── GameUtils.js       ← Funções utilitárias
+
+
+🎮 COMO RODAR
+=============
+
+OPÇÃO 1: Script Automático (Recomendado)
+-----------------------------------------
+Linux/macOS:
+  chmod +x dev-start.sh
+  ./dev-start.sh
+
+Windows:
+  run.bat
+
+OPÇÃO 2: Manual
+---------------
+Terminal 1:
+  cd backend
+  go mod download
+  go run main.go
+
+Terminal 2:
+  cd frontend
+  npm install
+  npm start
+
+Acesse: http://localhost:3000 (dev) ou http://localhost:8080 (produção)
+
+
+🎯 ARQUITETURA
+===============
+
+BACKEND (Go)
+  - WebSocket Server na porta 8080
+  - Game State Management
+  - Physics & Collision
+  - Multiplayer Synchronization
+  - Broadcasting em tempo real
+
+FRONTEND (React + Three.js)
+  - 3D Scene Rendering
+  - First-person Controller
+  - Real-time WebSocket Communication
+  - Audio Management (Howler.js)
+  - UI/HUD System
+
+
+🎵 TRILHA SONORA
+================
+
+Para adicionar Aphex Twin:
+1. Coloque arquivo MP3 em: frontend/public/
+2. Atualize: frontend/src/App.js
+
+Recomendações:
+  - Windowlicker (Remix)
+  - Avril 14th (Dark Version)
+  - Vordhosbn
+  - Come to Daddy (Remix)
+
+Ver AUDIO_GUIDE.md para detalhes completos
+
+
+🎮 CONTROLES DO JOGO
+====================
+
+W/A/S/D    - Mover
+Mouse      - Olhar
+Clique     - Capturar mouse
+ESC        - Soltar mouse/Parar
+
+
+📊 STACK TECNOLÓGICO
+====================
+
+Backend:
+  - Go 1.21+
+  - Gorilla WebSocket
+  - JSON protocol
+
+Frontend:
+  - React 18
+  - Three.js (renderização 3D)
+  - Howler.js (áudio)
+  - WebSocket API
+
+DevOps:
+  - Node.js 18+
+  - npm/yarn
+
+
+📚 DOCUMENTAÇÃO
+===============
+
+README.md          - Guia completo do projeto
+QUICKSTART.md      - Começar rápido
+DEVELOPMENT.md    - Desenvolvendo novas features
+AUDIO_GUIDE.md    - Integração de áudio avançada
+EXAMPLES.md       - Exemplos práticos de extensão
+
+
+🔧 PRINCIPAIS FEATURES
+======================
+
+✨ Cenário 3D Escuro e Atmosférico
+  - Renderização em tempo real
+  - Fog effect para criar mistério
+  - Iluminação dinâmica
+
+🎵 Imersão Sonora
+  - Trilha sonora de Aphex Twin
+  - Efeitos sonoros dinâmicos
+  - Web Audio API procedural
+
+👻 Mecânica de Exploração
+  - Primeira pessoa com controles suaves
+  - Coleta de objetos
+  - Sistema de pistas/hints
+
+🎯 Objetivo Dinâmico
+  - Encontrar saída da escuridão
+  - HUD com indicador de distância
+  - Progressão visual
+
+
+🚀 PRÓXIMOS PASSOS
+==================
+
+1. Instalar dependências
+2. Rodar dev-start.sh (ou run.sh)
+3. Adicionar arquivo de áudio Aphex Twin
+4. Abrir http://localhost:3000
+5. Explorar a escuridão!
+
+Para estender o jogo, ver EXAMPLES.md
+
+
+📝 DESENVOLVIMENTO
+==================
+
+Estrutura de componentes reutilizável
+Sistema modular de efeitos
+Utilidades compartilhadas
+Fácil de estender
+
+Ver DEVELOPMENT.md para guia completo
+
+
+🐛 TROUBLESHOOTING
+==================
+
+Porta em uso:
+  lsof -i :8080
+  kill -9 <PID>
+
+Áudio não funciona:
+  - Clique no jogo para ativar
+  - Verifique permissões de arquivo
+  - Console do navegador (F12)
+
+Conexão falha:
+  - Verifique se backend está rodando
+  - Porta 8080 disponível
+  - Firewall não bloqueando
+
+
+📄 ARQUIVOS IMPORTANTES
+========================
+
+/backend/main.go
+  - Entrada do servidor
+  - WebSocket handler
+  - Game logic
+
+/frontend/src/App.js
+  - Componente principal
+  - Inicialização de conexão
+  - Gerenciamento de estado
+
+/frontend/src/components/GameScene.js
+  - Renderização 3D completa
+  - Controls primeira pessoa
+  - Interações com o mundo
+
+/frontend/src/components/GameHUD.js
+  - Interface visual
+  - Status do jogador
+  - Feedback do jogo
+
+
+🎓 APRENDENDO
+=============
+
+Go WebSockets:
+  https://github.com/gorilla/websocket
+
+Three.js 3D:
+  https://threejs.org/
+
+React:
+  https://react.dev/
+
+Howler.js Áudio:
+  https://howlerjs.com/
+
+
+🤝 CONTRIBUINDO
+===============
+
+1. Fork o projeto
+2. Crie branch (git checkout -b feature/nome)
+3. Commit mudanças (git commit -m 'Add feature')
+4. Push branch (git push origin feature/nome)
+5. Abra Pull Request
+
+
+📄 LICENÇA
+==========
+
+Projeto educacional. Use livremente!
+
+
+🎮 DIVIRTA-SE!
+==============
+
+Mergulhe na escuridão...
+Encontre a saída...
+Sobreviva ao terror...
+
+Boa sorte! 👻🎵
+```

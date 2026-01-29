@@ -1,0 +1,151 @@
+╔═══════════════════════════════════════════════════════════════════════╗
+║                                                                       ║
+║            🎮 theWall - Jogo de Terror Imersivo 🎮                   ║
+║                                                                       ║
+║                      LEIA-ME PRIMEIRO!                               ║
+║                                                                       ║
+╚═══════════════════════════════════════════════════════════════════════╝
+
+
+👋 BEM-VINDO!
+
+Você tem um projeto completo de jogo em Golang + React pronto para usar!
+
+theWall é um jogo de horror em primeira pessoa onde você:
+- Explora um cenário escuro e atmosférico
+- Procura encontrar a saída
+- Escuta uma trilha sonora assustadora (Aphex Twin)
+- Coleta pistas e objetos misteriosos
+
+
+🚀 COMECE EM 3 PASSOS:
+
+1. Abra o Terminal/PowerShell e navegue até a pasta:
+   cd /home/user/Coding/Pessoal/theWall
+
+2. Execute um dos scripts de inicialização:
+   
+   ✅ LINUX/macOS:
+      chmod +x dev-start.sh
+      ./dev-start.sh
+   
+   ✅ WINDOWS:
+      run.bat
+
+3. Abra seu navegador:
+   http://localhost:3000 (desenvolvimento)
+   ou
+   http://localhost:8080 (produção)
+
+
+📚 DOCUMENTAÇÃO (Leia nesta ordem):
+
+1. QUICKSTART.md        ← Guia rápido (COMECE AQUI)
+2. README.md            ← Documentação completa
+3. AUDIO_GUIDE.md       ← Como adicionar trilha sonora
+4. DEVELOPMENT.md       ← Para fazer mudanças no código
+5. EXAMPLES.md          ← Exemplos de como estender o jogo
+
+
+🎵 PRÓXIMO PASSO - ADICIONAR MÚSICA:
+
+O projeto usa um placeholder de áudio. Para adicionar Aphex Twin:
+
+1. Baixe uma faixa de Aphex Twin em MP3
+   (Recomendações: "Windowlicker", "Avril 14th", "Vordhosbn")
+
+2. Coloque o arquivo em:
+   frontend/public/ambient-horror.mp3
+
+3. Reinicie o frontend
+
+Veja AUDIO_GUIDE.md para instruções detalhadas.
+
+
+📁 ARQUIVOS IMPORTANTES:
+
+Backend (Servidor):
+  └─ backend/main.go       ← Todo o servidor Go
+
+Frontend (Interface):
+  └─ frontend/src/
+     ├─ App.js            ← Componente principal
+     ├─ components/
+     │  ├─ GameScene.js   ← Renderização 3D
+     │  └─ GameHUD.js     ← Interface visual
+     └─ utils/
+        ├─ AudioManager.js
+        ├─ VisualEffects.js
+        └─ GameUtils.js
+
+
+🎮 CONTROLES:
+
+W / A / S / D      Mover
+Mouse              Olhar ao redor
+Clique             Capturar mouse
+ESC                Soltar mouse
+
+
+💡 DICAS:
+
+• Se receber erro de porta: Execute "lsof -i :8080" para ver qual
+  processo está usando a porta e feche-o
+
+• Se áudio não tocar: Clique no jogo para ativar áudio do navegador
+  (requerimento de segurança)
+
+• Para editar o jogo: Veja DEVELOPMENT.md e EXAMPLES.md
+
+
+🔧 REQUISITOS:
+
+Backend:  Go 1.21+
+Frontend: Node.js 18+, npm
+Browser:  Chrome/Firefox/Edge com WebGL
+
+
+✅ TUDO ESTÁ PRONTO!
+
+Você tem:
+✓ Backend em Go com WebSocket
+✓ Frontend em React com Three.js
+✓ Sistema de áudio
+✓ Efeitos visuais
+✓ Documentação completa
+✓ Scripts de execução
+
+Apenas execute o script e divirta-se!
+
+
+❓ AJUDA:
+
+Arquivo          O que contém
+─────────────────────────────────────────────────────────────
+QUICKSTART.md    Começar rápido
+README.md        Documentação completa
+DEVELOPMENT.md   Guia de desenvolvimento
+AUDIO_GUIDE.md   Integração de áudio
+EXAMPLES.md      Exemplos práticos
+PROJECT_MAP.txt  Estrutura do projeto
+SUMMARY.txt      Resumo executivo
+
+
+🎯 PRÓXIMAS ETAPAS:
+
+1. [ ] Execut
+
+ar o script de inicialização
+2. [ ] Acessar http://localhost:3000
+3. [ ] Adicionar arquivo de áudio
+4. [ ] Explorar o jogo
+5. [ ] Ler DEVELOPMENT.md para fazer mudanças
+
+
+═══════════════════════════════════════════════════════════════════════
+
+Desenvolvido com ❤️ e ☠️
+
+Bom jogo! 👻🎵
+
+═══════════════════════════════════════════════════════════════════════

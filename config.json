@@ -1,0 +1,61 @@
+{
+  "name": "theWall",
+  "version": "1.0.0",
+  "description": "A dark exploration horror game with Aphex Twin soundtrack",
+  "author": "Your Name",
+  "type": "web-game",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "game",
+    "horror",
+    "exploration",
+    "three.js",
+    "golang",
+    "react"
+  ],
+  "gameSettings": {
+    "title": "theWall",
+    "startPosition": {
+      "x": 0,
+      "y": 1.6,
+      "z": 0
+    },
+    "exitPosition": {
+      "x": 50,
+      "y": 1,
+      "z": 50
+    },
+    "worldSize": {
+      "x": 200,
+      "y": 100,
+      "z": 200
+    },
+    "fogDistance": {
+      "near": 150,
+      "far": 200
+    },
+    "difficulty": "normal",
+    "audio": {
+      "masterVolume": 0.5,
+      "ambientVolume": 0.3,
+      "enabled": true,
+      "track": "ambient-horror.mp3"
+    },
+    "graphics": {
+      "shadows": true,
+      "fog": true,
+      "antialias": true,
+      "renderingScale": 1.0
+    }
+  },
+  "server": {
+    "host": "localhost",
+    "port": 8080,
+    "protocol": "ws",
+    "maxPlayers": 10,
+    "tickRate": 60
+  }
+}
